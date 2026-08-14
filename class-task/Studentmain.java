@@ -1,4 +1,6 @@
- class Student {
+import intro.Student;
+
+class Student {
     String name;
     String department;
     int age;

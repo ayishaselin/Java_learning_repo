@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
 class StudentInfo{
-    String name;
-    int age;
-    String department;
+    private String name;
+    private int age;
+    private  String department;
 
-    StudentInfo(String a, int b, String c){
+    StudentInfo(String name, int age, String department){
 
-      name = a;
-      age = b;
-     department = c;
+      this.name = name;
+      this.age = age;
+      this.department = department;
     }
 
     void display(){
@@ -17,6 +17,15 @@ class StudentInfo{
         System.out.println(" age: " + age);
         System.out.println(" department : " + department);
     }
+
+     void setName(String name,int age){
+        this.name = name;
+        this.age = age;
+     }
+
+     String getName(){
+        return name;
+     }
 }
 
 public class MainStudentinfo{
@@ -36,7 +45,9 @@ public class MainStudentinfo{
 
 
         StudentInfo si = new StudentInfo(name,age,department);
+        si.setName("pooja",25);
 
         si.display();
+        System.out.println(si.getName());
     }
 }
